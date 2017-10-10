@@ -27,7 +27,7 @@ startConnection();
 
 function initialPrompt() {
     inquirer.prompt([{
-        type: "choices",
+        type: "list",
         message: "select a path",
         choices: ["POST ITEM","BID ON ITEM"],
         name: "pathChoice"
@@ -73,10 +73,10 @@ function postItem() {
 
 function bidItem() {
     itemsList();
-
+    console.log(currItems);
     inquirer.prompt([{
-        type: "choices",
-        message: "pick a item",
+        type: "list",
+        message: "pick an item",
         choices: currItems,
         name: "userChoice"
     }]).then(function(r) {
@@ -115,13 +115,13 @@ function bidItem() {
 }
     function itemsList() {
         currItems = [];
-        connection.query("SELECT items FROM bids", function(error, results) {
-            console.log("hello");
-
+        connection.query("SELECT item FROM bids", function(error, results) {
+           
+           
             if (error) {
                 throw error;
             }
-
+            console.log(results);
             for (var x = 0; x < results.length; x++) {
                 currItems.push(results[x].item);
             }
