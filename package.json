@@ -1,0 +1,25 @@
+{
+  "name": "nodeEbay",
+  "version": "1.0.0",
+  "description": "Server side node app that accesses MYSQL. User can bid on items or add an item to database.",
+  "main": "ebay.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vpasquar/nodeEbay.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vpasquar/nodeEbay/issues"
+  },
+  "homepage": "https://github.com/vpasquar/nodeEbay#readme",
+  "dependencies": {
+    "inquirer": "^3.3.0",
+    "mysql": "^2.15.0",
+    "require": "^2.4.20"
+  }
+}
